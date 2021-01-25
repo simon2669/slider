@@ -1,0 +1,89 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.slider {
+  max-width: 700px;
+  border: 10px solid rgb(26, 95, 223);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  position: relative;
+}
+.slider .slider-items .item {
+  display: none;
+  position: relative;
+}
+.slider .slider-items .item .caption {
+  position: absolute;
+  height: 50px;
+  line-height: 50px;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(197, 185, 185, 0.383);
+}
+.slider .slider-items .item.active {
+  display: block;
+  animation-name: megjelenés;
+  animation-duration: 1s;
+}
+
+img {
+  overflow: hidden;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.slider .left-slide,
+.slider .right-slide {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #444444;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  top: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.4s ease-in-out;
+}
+.slider .left-slide:hover,
+.slider .right-slide:hover {
+  background-color: rgba(236, 231, 231, 0.87);
+}
+.slider .left-slide {
+  left: 30px;
+}
+.slider .right-slide {
+  right: 30px;
+}
+.slider .actual-picture {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: white;
+  font-size: 20px;
+}
+@keyframes megjelenés {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.radios {
+  text-align: center;
+  background-color: rgb(26, 95, 223);
+}
